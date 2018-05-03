@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<title>FAQ</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<!--link rel="stylesheet" href="css/w3.css"-->
-
+	<head>
+		<title>FAQ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<!--link rel="stylesheet" href="css/w3.css"-->
+		<script src="scripts/inc.js"></script>
+	</head>
 <body>
-	<header class="w3-container">
-		  <!-- -->
-	</header>
+	<div w3-include-html="menu.html"></div>
 
-	<div class="w3-bar w3-indigo">
-		<a href="index.html" class="w3-bar-item w3-button">Home</a>
-		<a href="faq.html" class="w3-bar-item w3-button">FAQ</a>
-	 	<a href="#" class="w3-bar-item w3-button">Contact</a>
-		<a href="#" class="w3-bar-item w3-button">About</a>
-	</div>
-
-	<div class="w3-container w3-indigo w3-padding-32 w3-center">
+	<div class="w3-container w3-black w3-padding-32 w3-center">
 		  <h1>Frequently-Asked Questions</h1>
 	</div>
 
 	<div class="w3-panel">
 
-		<button onclick="myFunction('Answer1')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer1')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			What is your role in Lark's campaign for Kane County Circuit Judge?</button>
 
-		<!--div id="Answer1" class="w3-panel w3-border w3-border-indigo w3-hide"-->
+		<!--div id="Answer1" class="w3-panel w3-border w3-border-black w3-hide"-->
 		<div id="Answer1" class="w3-panel w3-card w3-hide">
 			<p>Most of the time my role is taking care of our children so that Lark can campaign:</p>
 			<div class="w3-container w3-center">
@@ -36,7 +29,7 @@
 			<p>I am also the treasurer, but I accepted that job reluctantly.  I like numbers but I dislike responsibility and asking people for personal info.</p>
 		</div>
 
-		<button onclick="myFunction('Answer3')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer3')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			Why should I care about a judicial election?</button>
 
 		<div id="Answer3" class="w3-panel w3-card w3-hide">
@@ -51,21 +44,21 @@
 			</p>
 		</div>
 
-		<button onclick="myFunction('Answer2')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer2')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			What do you do?</button>
 
 		<div id="Answer2" class="w3-panel w3-card w3-hide">
 			<p>I work with computers.  I'm more of a programmer and less of an IT person, though I do spend a surpsrising amount of time asking people if electronics are plugged in and rebooting stuff.</p>
 		</div>
 
-		<!--button onclick="myFunction('Answer7')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<!--button onclick="myFunction('Answer7')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			Doesn't Lark know that she has to run as a<br>Republican to win an election in Kane County?</button>
 
 		<div id="Answer7" class="w3-panel w3-card w3-hide">
 			<p>Some text..</p>
 		</div>
 
-		<button onclick="myFunction('Answer4')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer4')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			How can I help?</button>
 
 		<div id="Answer4" class="w3-panel w3-card w3-hide">
@@ -79,7 +72,7 @@
 			<p>Tell someone about Lark Cowart.  It doesn't matter if it is online or IRL.</p>
 		</div>
 
-		<button onclick="myFunction('Answer5')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer5')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			How can I contact Lark?</button>
 
 		<div id="Answer5" class="w3-panel w3-card w3-hide">
@@ -87,7 +80,7 @@
 		</div>
 
 		
-		<button onclick="myFunction('Answer6')" class="w3-button w3-block w3-left-align w3-border-left w3-border-indigo">
+		<button onclick="myFunction('Answer6')" class="w3-button w3-block w3-left-align w3-border-left w3-border-black">
 			Shouldn't you have a real website?</button>
 
 		<div id="Answer6" class="w3-panel w3-card w3-hide">
@@ -96,10 +89,11 @@
 
 	</div>
 
-	<div class="w3-container w3-indigo">
-		<h5>Footer</h5>
-		<p>Footer information goes here</p>
-	</div>
+	<div w3-include-html="footer.html"></div>
+
+	<script>
+		includeHTML();
+	</script>
 
 </body>
 
@@ -108,11 +102,11 @@
 		var x = document.getElementById(id);
 		if (x.className.indexOf("w3-show") == -1) {
 	 		x.className += " w3-show";
-    			x.previousElementSibling.className += " w3-indigo";
+    			x.previousElementSibling.className += " w3-black";
 	        } else { 
 			x.className = x.className.replace(" w3-show", "");
         		x.previousElementSibling.className = 
-	  		x.previousElementSibling.className.replace(" w3-indigo", "");
+	  		x.previousElementSibling.className.replace(" w3-black", "");
 	    	}
 	}
 </script>
