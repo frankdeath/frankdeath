@@ -6,3 +6,10 @@ function showHide(id) {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+function w3_open(id) {
+  document.getElementById(id).style.display = "block";
+}
+function w3_close(id) {
+  document.getElementById(id).style.display = "none";
+}
